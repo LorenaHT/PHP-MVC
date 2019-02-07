@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+<h1>Listado de los libros por categorias</h1>
+
+{% for book in books %}
+<p> {{ book['title'] }} , {{ book['category_id'] }}</p>
+{% endfor %}
+
+
+{% endblock %}
