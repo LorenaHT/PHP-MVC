@@ -29,4 +29,11 @@ class Category extends \Core\Model
         $stmt = $db->query("SELECT * FROM books where category_id =$id");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public static function getCategory($id)
+    {
+        $db = static::getDB();
+        $stmt = $db->query("SELECT category_name FROM categories where category_id =$id");
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

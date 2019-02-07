@@ -23,4 +23,5 @@ class Book extends \Core\Model
         $stmt = $db->query('SELECT * FROM books');
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
 }

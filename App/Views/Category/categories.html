@@ -4,11 +4,28 @@
 
 {% block body %}
 
-<h1>Listado de los libros por categorias</h1>
-
+<div class="content">
+    <h2>Select Catalog</h2>
+    <p>Category: <strong>{{category}}</strong></p>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Details</th>
+        </tr>
 {% for book in books %}
-<p> {{ book['title'] }} , {{ book['category_id'] }}</p>
+        <tr>
+            <td>{{ book['title'] }}</td>
+            <td>{{ book['author'] }}</td>
+            <td>{{ book['price'] }}</td>
+            <td><a class="link1"
+                   href="">
+                Details</a></td>
+        </tr>
 {% endfor %}
+    </table>
+</div>
 
 
 {% endblock %}
